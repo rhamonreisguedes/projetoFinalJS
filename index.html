@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookflix</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/index/icon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/slick/slickFilho/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/slick/slickFilho/slick-theme.css"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top" id="black">
+            <div class="container-fluid">
+                <a href="#"><img src="assets/images/index/logo.png" id="logo" alt="Logo Bookflix"></a>
+                <button class="navbar-toggler text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="#" class="nav-link px-2 link-light">Início</a></li>
+                        <li><a href="#literatura" class="nav-link px-2 link-light">Literatura</a></li>
+                        <li><a href="#motivacional" class="nav-link px-2 link-light">Motivacional</a></li>
+                        <li><a href="#bestSellers" class="nav-link px-2 link-light">Best-Sellers</a></li>
+                        <li><a href="#minhaBiblioteca" class="nav-link px-2 link-light">Sua Leitura</a></li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 bg-dark text-secondary border-secondary shadow-none" type="search" placeholder="Pesquisar Título..." aria-label="Search">
+                    </form>
+                </div>
+                <div class="dropdown text-end">
+                    <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="assets/images/index/profile.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end text-small dropdown-menu-dark">
+                        <li><a class="dropdown-item link-light" href="#"><i class="fa-solid fa-book-open"></i> Meus Livros</a></li>
+                        <li><a class="dropdown-item link-light" href="#"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+                        <li><a class="dropdown-item link-light" href="#"><i class="fa-solid fa-user"></i> Perfil</a></li>
+                        <li><hr class="dropdown-divider bg-light"></li>
+                        <li><a class="dropdown-item link-light" href="#"><i class="fa-solid fa-person-walking-arrow-right"></i> Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="fonte" id="banner">
+        <span class="position-absolute col-lg-6 col-md-7 col-7 text-light fs-1 text-center pt-5 mt-md-5">
+            <p class="fw-bold mt-xl-5 telaGrande">Grandes Livros</p>
+            <p class="fw-bold telaGrande">para Grandes Leitores</p>
+            <button type="button" id="btnNovidades" class="btn btn-outline mt-lg-3 p-md-2">Confira as novidades do mês</button>
+        </span>
+        <img src="assets/images/index/banner.jpg" class="img-fluid" id="bannerImage" alt="Banner Bookflix">
+    </div>
+    
+    <!-- SEM PLACEHOLDER BOOTSTRAP -->
+    <div id="semPlaceholder" style="display: none;">
+        <section id="literatura" class="bg-dark">
+            <h2 class="text-light py-4 fonte fw-bold titulo_section">Literatura</h2>
+        </section>
+
+        <section id="motivacional" class="bg-dark">
+            <h2 class="text-light py-4 fonte fw-bold titulo_section">Motivacional</h2>
+        </section>
+
+        <section id="bestSellers" class="bg-dark">
+            <h2 class="text-light py-4 fonte fw-bold titulo_section">Best-Sellers</h2>
+        </section>
+
+        <section id="minhaBiblioteca" class="bg-dark">
+            <h2 class="text-light py-4 fonte fw-bold titulo_section">Minha Biblioteca</h2>
+            <p id='textoInicial' class="fonte fs-4 text-center text-light py-5" style="display:none"></p>
+        </section>
+    </div>
+
+    <!-- COM PLACEHOLDER BOOTSTRAP -->
+    <div id="placeholderInicial" class="bg-dark m-auto" style="display: block;">
+          <h2 class="placeholder-glow d-flex justify-content-around">
+            <span class="placeholder col-6 bg-danger my-3 placeholder-lg"></span>
+          </h2>
+          <p class="placeholder-glow d-flex justify-content-around">
+            <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+            <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+            <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+            <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+          </p>
+        <h2 class="placeholder-glow d-flex justify-content-around">
+          <span class="placeholder col-6 bg-danger my-3 placeholder-lg"></span>
+        </h2>
+        <p class="placeholder-glow d-flex justify-content-around">
+          <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+          <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+          <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+          <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+        </p>
+        <h2 class="placeholder-glow d-flex justify-content-around">
+            <span class="placeholder col-6 bg-danger my-3 placeholder-lg"></span>
+        </h2>
+        <p class="placeholder-glow d-flex justify-content-around">
+            <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+            <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+            <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+            <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+        </p>
+        <h2 class="placeholder-glow d-flex justify-content-around">
+            <span class="placeholder col-6 bg-danger my-3 placeholder-lg"></span>
+        </h2>
+        <p class="placeholder-glow d-flex justify-content-around">
+            <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+            <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+            <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+            <span class="placeholder col-12 bg-danger formatoLivro m-2"></span>
+        </p>
+    </div>
+
+    <footer class="d-flex bg-dark text-light flex-wrap justify-content-between align-items-center py-3">
+            <div class="col-md-4 col-3 d-flex align-items-center">
+                <span class="mb-3 mb-md-0 text-muted ms-5">Bookflix© 2022</span>
+            </div>
+            <ul class="nav col-md-4 col-7 justify-content-end list-unstyled d-flex me-md-5">
+                <li class="me-3"><a class="text-muted" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="me-3"><a class="text-muted" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                <li class="me-3"><a class="text-muted" href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="me-3"><a class="text-muted" href="https://tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+              </ul>
+            </footer>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger fw-bold fs-3" id="tituloLivroModal"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id='btn_id_close'></button>
+                    </div>
+                    <div class="modal-body text-light" id="capaLivroModal">
+                    </div>
+                    <div class="modal-body text-light">
+                        <p class="text-center" id="descricaoLivroModal"></p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn_voltar_menu">Voltar para o Menu Principal</button>
+                    <button type="button" class="btn btn-light btn_add_livro"  data-bs-toggle="popover" data-bs-title="Título Adicionado!" data-bs-content="Aproveite o título escolhido na hora que quiser!" id="">Adicionar a sua Biblioteca</button>
+                    <button type="button" class="btn btn-danger" id="btn_comecar_ler">Começar a Ler</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        <script src="assets/bootstrap/bootstrap.bundle.min.js"></script> 
+        <script type="text/javascript" src="assets/slick/slickFilho/slick.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
